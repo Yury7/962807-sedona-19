@@ -13,19 +13,18 @@
       <img class="page-header__logo-image" src="#" alt="Седона - туристический сайт горда" width="" height="">
     </a>
     <nav class="main-nav">
-      <h2 class="visualy-hidden">Главное меню</h2>
       <button class="main-nav__btn">Открыть меню</button>
       <ul class="main-nav__list site-list">
-        <li class="site-list__item">Главная<a href="#"></a></li>
-        <li class="site-list__item">Фото и видео<a href="#"></a></li>
-        <li class="site-list__item">Форма и отзывы<a href="#"></a></li>
-        <li class="site-list__item">HTML Academy<a href="#"></a></li>
+        <li class="site-list__item"><a href="#">Главная</a></li>
+        <li class="site-list__item"><a href="#">Фото и видео</a></li>
+        <li class="site-list__item"><a href="#">Форма и отзывы</a></lii>
+        <li class="site-list__item"><a href="#">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
     <h2 class="page-main__title">Фото и Видео</h2>
-    <img class="page-main__img" src="#" alt="Wellcome to the gorgeous Sedona." width="" height="">
+    <img class="page-main__img" src="#" alt="Welcome to the gorgeous Sedona." width="" height="">
     <section class="photo">
       <h3 class="visualy-hidden">Фото</h3>
       <p class="photo__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
@@ -33,7 +32,8 @@
         <li class="photo-list__item post">
           <figure class="post__frame">
             <a href="#" class="post__link">
-              <picture class="post__pic">
+              <picture>
+                <img class="post__img" src="#" alt="Неродные просторы" width="" height="">
                 <source media="" scrset="#">
               </picture>
             </a>
@@ -42,16 +42,17 @@
               <p class="post__author">Автор фото:
                 <a class="post__author-link" href="#"><cite>Борис</cite></a>
               </p>
-              <div class="post__likes">
+              <button class="post__like-btn" type="button">
                 <span class="post__likes-count">1350</span>
-              </div>
+              </button>
             </figcaption>
           </figure>
         </li>
         <li class="photo-list__item post">
           <figure class="post__frame">
             <a href="#" class="post__link">
-              <picture class="post__pic">
+              <picture>
+                <img class="post__img" src="#" alt="Местная растительность" width="" height="">
                 <source media="" scrset="#">
               </picture>
             </a>
@@ -60,16 +61,17 @@
               <p class="post__author">Автор фото:
                 <a class="post__author-link" href="#"><cite>Сергей</cite></a>
               </p>
-              <div class="post__likes">
+              <button class="post__like-btn" type="button">
                 <span class="post__likes-count">143</span>
-              </div>
+              </button>
             </figcaption>
           </figure>
         </li>
         <li class="photo-list__item post">
           <figure class="post__frame">
             <a href="#" class="post__link">
-              <picture class="post__pic">
+              <picture>
+                <img class="post__img" src="#" alt="Дорога на север" width="" height="">
                 <source media="" scrset="#">
               </picture>
             </a>
@@ -78,16 +80,17 @@
               <p class="post__author">Автор фото:
                 <a class="post__author-link" href="#"><cite>Петр</cite></a>
               </p>
-              <div class="post__likes">
+              <button class="post__like-btn" type="button">
                 <span class="post__likes-count">96</span>
-              </div>
+              </button>
             </figcaption>
           </figure>
         </li>
         <li class="photo-list__item post">
           <figure class="post__frame">
             <a href="#" class="post__link">
-              <picture class="post__pic">
+              <picture>
+                <img class="post__img" src="#" alt="Мост Дьявола" width="" height="">
                 <source media="" scrset="#">
               </picture>
             </a>
@@ -96,9 +99,9 @@
               <p class="post__author">Автор фото:
                 <a class="post__author-link" href="#"><cite>Антон</cite></a>
               </p>
-              <div class="post__likes">
+              <button class="post__like-btn" type="button">
                 <span class="post__likes-count">254</span>
-              </div>
+              </button>
             </figcaption>
           </figure>
         </li>
@@ -112,11 +115,11 @@
         <video class="player__frame" src="#">
           <source media="" srcset="#">
         </video>
-        <div class="player__ctrl ctrl">
-          <button class="ctrl__reload" type="button"></button>
-          <input class="ctrl__progress-bar" type="range" name="">
-          <button class="ctrl__subtitles"></button>
-          <button class="ctrl__fullscreen"></button>
+        <div class="player__control control">
+          <button class="control__reload" type="button"></button>
+          <div class="control__progress-bar" type="range" name=""></div>
+          <button class="control__subtitles"></button>
+          <button class="control__fullscreen"></button>
         </div>
       </div>
     </section>
