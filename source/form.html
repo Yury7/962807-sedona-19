@@ -15,10 +15,10 @@
     <nav class="main-nav">
       <button class="main-nav__btn">Открыть меню</button>
       <ul class="main-nav__list site-list">
-        <li class="site-list__item button"><a href="#">Главная</a></li>
-        <li class="site-list__item button"><a href="#">Фото и видео</a></li>
-        <li class="site-list__item button"><a href="#">Форма и отзывы</a></li>
-        <li class="site-list__item button"><a href="#">HTML Academy</a></li>
+        <li class="site-list__item"><a href="#">Главная</a></li>
+        <li class="site-list__item"><a href="#">Фото и видео</a></li>
+        <li class="site-list__item"><a href="#">Форма и отзывы</a></li>
+        <li class="site-list__item"><a href="#">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
@@ -28,86 +28,74 @@
     </div>
     <h2 class="page-main__title">Оставьте свой отзыв</h2>
     <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
-    <form action="https://echo.htmlacademy.ru" class="feedback" method="post">
-      <fieldset class="feedback__sect">
-        <legend class="feedback__title">Представьтесь:</legend>
-        <div class="form-row">
-          <label class="feedback__row-name form-row__label">Имя:
-            <input class="feedback__row-input form-row__input" type="text" name="name" placeholder="Петр">
-          </label>
+    <form action="https://echo.htmlacademy.ru" class="page-main__form form" method="post">
+      <fieldset class="form__sect">
+        <legend class="form__title">Представьтесь:</legend>
+        <div class="form-text">
+          <label for="i1" class="form-text__label">Имя:</label>
+          <input id="i1" class="form-text__input" type="text" name="name" placeholder="Петр">
         </div>
-        <div class="form-row">
-          <label class="feedback__row-name form-row__label">Фамилия:
-            <input class="feedback__row-input form-row__input" type="text" name="surname" placeholder="Иванов">
-          </label>
+        <div class="form-text">
+          <label for="i2" class="form-text__label">Фамилия:</label>
+          <input id="i2" class="form-text__input" type="text" name="surname" placeholder="Иванов">
         </div>
-        <div class="form-row">
-          <label class="feedback__row-name form-row__label">Отчество:
-            <input class="feedback__row-input form-row__input" type="text" name="patronymic" placeholder="Александрович">
-          </label>
+        <div class="form-text">
+          <label for="i3" class="form-text__label">Отчество:</label>
+          <input id="i3" class="form-text__input" type="text" name="patronymic" placeholder="Александрович">
         </div>
       </fieldset>
-      <fieldset class="feedback__sect">
-        <legend class="feedback__title">Контактная информация:</legend>
+      <fieldset class="form__sect">
+        <legend class="form__title">Контактная информация:</legend>
         <div class="form-number">
-          <label class="feedback__phone-name form-number__label">Контактный телефон
-            <input class="feedback__phone-input form-number__input" type="tel" name="phone" placeholder="Введите телефон">
-          </label>
+          <label for="i4" class="form-number__label">Контактный телефон</label>
+          <input id="i4" class="form-number__input form-number__input--phone" type="tel" name="phone" placeholder="Введите телефон">
         </div>
         <div class="form-email">
-          <label class="feedback__email-name form-email__label">Электронная почта:
-            <input class="feedback__email-input form-email__input" type="email" name="email" placeholder="Введите e-mail">
-          </label>
+          <label for="i5" class="form-email__label">Электронная почта:</label>
+          <input id="i5" class="form-email__input form-email__input--email" type="email" name="email" placeholder="Введите e-mail">
         </div>
       </fieldset>
-      <fieldset class="feedback__sect">
-        <legend class="feedback__title">Ваше общее впечатление:</legend>
+      <fieldset class="form__sect">
+        <legend class="form__title">Ваше общее впечатление:</legend>
         <div class="form-radio">
-          <label class="feedback__radio-name form-radio__label">Скорее положительное
-            <input class="feedback__radio-input form-radio__input" type="radio" name="impression" value="positive" checked>
-          </label>
+          <label for="i6" class="form-radio__label">Скорее положительное</label>
+          <input id="i6" class="form-radio__input" type="radio" name="impression" value="positive" checked>
         </div>
         <div class="form-radio">
-          <label class="feedback__radio-name form-radio__label">Скорее отрицательное
-            <input class="feedback__radio-input form-radio__input" type="radio" name="impression" value="negative">
-          </label>
+          <label for="i7" class="form-radio__label">Скорее отрицательное</label>
+          <input id="i7" class="form-radio__input" type="radio" name="impression" value="negative">
         </div>
         <div class="form-radio">
-          <label class="feedback__radio-name form-radio__label">Затрудняюсь ответить
-            <input class="feedback__radio-input form-radio__input" type="radio" name="impression" value="none">
-          </label>
+          <label for="i8" class="form-radio__label">Затрудняюсь ответить</label>
+          <input id="i8" class="form-radio__input" type="radio" name="impression" value="none">
         </div>
       </fieldset>
-      <fieldset class="feedback__sect">
-        <legend class="feedback__title">Посещенные достопримечательности:</legend>
+      <fieldset class="form__sect">
+        <legend class="form__title">Посещенные достопримечательности:</legend>
         <div class="form-chbox">
-          <label class="feedback__chbox-name form-chbox__label">Мост Дьявола
-            <input class="feedback__chbox-input form-chbox__input" type="checkbox" name="sightseeing" value="Devil_Bridge" checked>
-          </label>
+          <label for="i9" class="form-chbox__label">Мост Дьявола</label>
+          <input id="i9" class="form-chbox__input" type="checkbox" name="sightseeing" value="Devil_Bridge" checked>
         </div>
         <div class="form-chbox">
-          <label class="feedback__chbox-name form-chbox__label">Слайд-парк
-            <input class="feedback__chbox-input form-chbox__input" type="checkbox" name="sightseeing" value="Slide_park" checked>
-          </label>
+          <label for="i10" class="form-chbox__label">Слайд-парк</label>
+          <input id="i10" class="form-chbox__input" type="checkbox" name="sightseeing" value="Slide_park" checked>
         </div>
         <div class="form-chbox">
-          <label class="feedback__chbox-name form-chbox__label">Гора-Колокол
-            <input class="feedback__chbox-input form-chbox__input" type="checkbox" name="sightseeing" value="Mount_Bell" checked>
-          </label>
+          <label for="i11" class="form-chbox__label">Гора-Колокол</label>
+          <input id="i11" class="form-chbox__input" type="checkbox" name="sightseeing" value="Mount_Bell" checked>
         </div>
         <div class="form-chbox">
-          <label class="feedback__chbox-name form-chbox__label">Красные скалы
-            <input class="feedback__chbox-input form-chbox__input" type="checkbox" name="sightseeing" value="Red_rocks">
-          </label>
+          <label for="i12" class="form-chbox__label">Красные скалы</label>
+          <input id="i12" class="form-chbox__input" type="checkbox" name="sightseeing" value="Red_rocks">
         </div>
       </fieldset>
-      <fieldset class="feedback__sect">
-        <legend class="feedback__title">Опишите свои эмоции:</legend>
-        <div class="form-text">
-          <textarea class="feedback__text-input form-chbox__input" name="description" placeholder="Опишите подробно все свои восторги"></textarea>
+      <fieldset class="form__sect">
+        <legend class="form__title">Опишите свои эмоции:</legend>
+        <div class="form-textarea">
+          <textarea class="form-textarea__input" name="description" placeholder="Опишите подробно все свои восторги"></textarea>
         </div>
       </fieldset>
-      <button class="feedback__submit button" type="submit">Отправить отзыв</button>
+      <button class="button form-button" type="submit">Отправить отзыв</button>
       <small class="page-main__text">* — Обязательные поля</small>
     </form>
     <footer class="page-footer">
