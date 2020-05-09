@@ -1,0 +1,66 @@
+body {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px;
+  color: @dark-gray;
+  background-color: @white;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+body * {
+  list-style-type: none;
+  list-style-position: inside;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+@media (min-width:@tablet-width) {
+  body {
+    min-width: @tablet-width;
+  }
+}
+
+@media (min-width:@desktop-width) {
+  body {
+    min-width: @desktop-width;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: @dark-gray;
+  cursor: pointer;
+}
+
+a:active,
+button:active {
+  opacity: 0.3;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

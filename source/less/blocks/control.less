@@ -1,0 +1,119 @@
+.control {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  position: absolute;
+  background-color: @silver;
+  left: 20px;
+  right: 20px;
+  height: 66px;
+  margin-top: -4px;
+}
+
+.control__progress-bar {
+  height: 45px;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: -45px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 22px;
+    right: 22px;
+    height: 3px;
+    background-color: @white;
+    opacity: 0.2;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 58px;
+    transform: translate(0, -50%);
+    background-color: @white;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+}
+
+.control__reload,
+.control__subtitles,
+.control__fullscreen {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: auto 0px;
+  flex-shrink: 0;
+}
+
+.control__reload {
+  width: 16px;
+  height: 20px;
+  margin-left: 25px;
+  background-image: url(../../img/icon-video-replay.svg);
+}
+
+.control__subtitles {
+  width: 32px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: 31px;
+  background-image: url(../../img/icon-video-subtitles.svg);
+}
+
+.control__fullscreen {
+  width: 20px;
+  height: 20px;
+  margin-right: 23px;
+  background-image: url(../../img/icon-video-fullscreen.svg);
+}
+
+
+@media (min-width: @tablet-width) {
+
+  .control {
+    left: 0px;
+    right: 0px;
+    height: 93px;
+    bottom: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .control__progress-bar {
+    display: inline-block;
+    top: 0px;
+    margin: auto 0px;
+    position: relative;
+    background-color: transparent;
+
+    &::before {
+      left: 0px;
+      right: 0px;
+    }
+
+  }
+
+  .control__reload {
+    margin-left: 35px;
+    margin-right: 42px;
+  }
+
+  .control__subtitles {
+    margin-left: 42px;
+    margin-right: 31px;
+  }
+
+  .control__fullscreen {
+    margin-right: 41px;
+  }
+}

@@ -1,0 +1,40 @@
+.presentation__title {
+  min-height: 110px;
+  padding: 20px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  position: relative;
+}
+
+.presentation__intro {
+  position: relative;
+  padding: 8px 30px 40px;
+  line-height: 26px;
+  min-height: 92px;
+}
+
+
+.presentation__intro::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin-left: -30px;
+  height: 57px;
+  bottom: 0px;
+  background-image: url(../../img/bg-intro-triangle-desktop-blue.svg);
+  background-position: 50% 50%;
+  background-size: auto 57px;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .presentation__intro::after {
+    display: none;
+  }
+
+  .presentation__title {
+    padding: 0px 160px 30px;
+  }
+}
