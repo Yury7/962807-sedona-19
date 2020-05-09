@@ -43,7 +43,6 @@
     background-color: @white;
     border-radius: 5px 5px 5px 5px;
   }
-
 }
 
 .control__reload,
@@ -52,7 +51,7 @@
   background-color: transparent;
   border: none;
   outline: none;
-  margin: auto 0px;
+  margin: auto 0;
   flex-shrink: 0;
 }
 
@@ -60,7 +59,7 @@
   width: 16px;
   height: 20px;
   margin-left: 25px;
-  background-image: url(../../img/icon-video-replay.svg);
+  background-image: url("../../img/icon-video-replay.svg");
 }
 
 .control__subtitles {
@@ -68,22 +67,21 @@
   height: 20px;
   margin-left: auto;
   margin-right: 31px;
-  background-image: url(../../img/icon-video-subtitles.svg);
+  background-image: url("../../img/icon-video-subtitles.svg");
 }
 
 .control__fullscreen {
   width: 20px;
   height: 20px;
   margin-right: 23px;
-  background-image: url(../../img/icon-video-fullscreen.svg);
+  background-image: url("../../img/icon-video-fullscreen.svg");
 }
 
 
 @media (min-width: @tablet-width) {
-
   .control {
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     height: 93px;
     bottom: 4px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -91,16 +89,15 @@
 
   .control__progress-bar {
     display: inline-block;
-    top: 0px;
-    margin: auto 0px;
+    top: 0;
+    margin: auto 0;
     position: relative;
     background-color: transparent;
 
     &::before {
-      left: 0px;
-      right: 0px;
+      left: 0;
+      right: 0;
     }
-
   }
 
   .control__reload {

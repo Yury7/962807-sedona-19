@@ -38,8 +38,8 @@
     display: block;
     height: 7px;
     width: 100%;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.14));
   }
 }
@@ -68,7 +68,7 @@
 
     .order(@i: 1) when (@i =< 4) {
       &:nth-child(@{i}) {
-        order: -9+@i*2;
+        order: -9 + @i*2;
       }
 
       .order(@i + 1);
@@ -98,7 +98,8 @@
   }
 
   .site-list__item--active a {
-  color: #766357;
+    color: #766357;
+
     &:active {
       opacity: 0.3;
     }
@@ -111,5 +112,4 @@
       color: #604e43;
     }
   }
-
 }

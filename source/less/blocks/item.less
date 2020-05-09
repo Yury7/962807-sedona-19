@@ -11,18 +11,20 @@
   &--theme-gray {
     background-color: @light-gray;
     padding: 26px 20px 33px;
+
     &::after {
       content: "";
       display: block;
       position: absolute;
-      bottom: 0px;
+      bottom: 0;
       left: 20px;
       right: 20px;
       height: 1px;
       background-color: black;
       opacity: 0.1;
     }
-    &:last-child::after{
+
+    &:last-child::after {
       display: none;
     }
   }
@@ -35,21 +37,21 @@
 
   &--num {
     position: relative;
-    padding: 0px 20px 47px;
+    padding: 0 20px 47px;
   }
 
   &--num::after {
     counter-increment: num;
-    content: ' \2013   \2116'counter(num)'  \2013';
+    content: " \2013   \2116"counter(num) "  \2013";
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     bottom: 16px;
   }
 }
 
 .item__heading--icon {
-  padding: 34px 20px 0px 70px;
+  padding: 34px 20px 0 70px;
 
   &::before {
     content: "";
@@ -66,30 +68,30 @@
   }
 
   &-house::before {
-    background-image: url(../../img/icon-house.svg);
+    background-image: url("../../img/icon-house.svg");
   }
 
   &-gift::before {
-    background-image: url(../../img/icon-gift.svg);
+    background-image: url("../../img/icon-gift.svg");
   }
 
   &-food::before {
-    background-image: url(../../img/icon-burger.svg);
+    background-image: url("../../img/icon-burger.svg");
   }
 }
 
 .item__desc {
-  padding: 0px 12px 0px;
+  padding: 0 12px 0;
 
   &--icon {
     color: @dark-gray;
-    padding: 15px 20px 0px 70px;
+    padding: 15px 20px 0 70px;
     line-height: 20px;
   }
 }
 
 .item__img {
-  padding: 0px;
+  padding: 0;
   padding-top: 43px;
   display: block;
   width: 100%;
@@ -101,9 +103,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px;
+    padding: 0;
     width: 100%;
-
   }
 
   .item--theme-gray {
@@ -113,7 +114,8 @@
     flex-grow: 1;
     height: 256px;
     justify-content: center;
-    &::after{
+
+    &::after {
       display: none;
     }
   }
@@ -143,12 +145,12 @@
   }
 
   .item__desc--icon {
-    padding: 0px 20px 0px;
+    padding: 0 20px 0;
   }
 
   .item__img {
     width: 512/768*100%;
-    padding: 0px;
+    padding: 0;
   }
 
   .item--theme-main:nth-child(even) .item__img {
