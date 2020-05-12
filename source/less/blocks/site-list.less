@@ -1,16 +1,17 @@
 .site-list__item {
-  display: table;
+  @line-hight: 56px;
   position: relative;
   width: 100%;
-  min-height: 56px;
+  min-height: @line-hight;
   font-size: 18px;
   font-weight: 700;
-}
 
-.site-list__item a {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+  & a {
+    display: block;
+    line-height: @line-hight;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 
@@ -63,7 +64,6 @@
   .site-list__item {
     width: auto;
     flex-basis: 153px;
-    min-height: 56px;
     flex-grow: 1;
 
     .order(@i: 1) when (@i =< 4) {

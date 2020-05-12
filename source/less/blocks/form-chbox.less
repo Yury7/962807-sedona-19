@@ -1,1 +1,67 @@
-/* just comment */
+@chbox-size: 56px;
+@chbox-margin-left: 78px;
+
+.form-chbox {
+  text-transform: initial;
+  color: @black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0 0 24px;
+}
+
+.form-chbox__label {
+  display: block;
+  position: relative;
+  line-height: @chbox-size;
+  margin: 0;
+  margin-left: @chbox-margin-left;
+  text-align-last: left;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: @chbox-size;
+    height: @chbox-size;
+    background-color: @silver;
+    border-radius: 12%;
+    left: -@chbox-margin-left;
+    top: 52%;
+    transform: translateY(-50%);
+  }
+}
+
+.form-chbox__input:checked ~ .form-chbox__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: @chbox-size*0.52;
+  height: @chbox-size*0.52;
+  left: -@chbox-margin-left + @chbox-size/2 - @chbox-size*0.52/2;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../img/icon-tick.svg");
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: @tablet-width) {
+  .form-chbox {
+    margin: 16px;
+    flex-basis: 39%;
+  }
+
+  .form-chbox__label {
+    line-height: @chbox-size;
+    text-align-last: left;
+    margin-left: @chbox-margin-left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-chbox {
+    flex-basis: auto;
+  }
+}

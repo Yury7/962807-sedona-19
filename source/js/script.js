@@ -1,6 +1,8 @@
 var navMain = document.querySelector('.main-nav');
 var navBtn = document.querySelector('.main-nav__btn');
 var navBtnClose = document.querySelector('.main-nav__btn--close');
+var navActiveItem = document.querySelector('.site-list__item--active');
+
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -15,6 +17,13 @@ navBtn.addEventListener('click', function() {
 });
 
 navBtnClose.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--opened')) {
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+    }
+});
+
+navActiveItem.addEventListener('click', function() {
     if (navMain.classList.contains('main-nav--opened')) {
         navMain.classList.remove('main-nav--opened');
         navMain.classList.add('main-nav--closed');

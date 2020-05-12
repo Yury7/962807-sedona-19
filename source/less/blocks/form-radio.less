@@ -1,1 +1,53 @@
-/* just comment */
+@radio-size: 56px;
+@radio-margin-left: 80px;
+
+.form-radio {
+  text-transform: initial;
+  color: @black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.form-radio__label {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  line-height: @radio-size;
+  text-align-last: left;
+  margin: 7px 0;
+  margin-left: @radio-margin-left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: @radio-size;
+    height: @radio-size;
+    background-color: @silver;
+    border-radius: 50%;
+    left: -@radio-margin-left;
+    top: 52%;
+    transform: translateY(-50%);
+  }
+}
+
+.form-radio__input:checked ~ .form-radio__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: @radio-size*0.36;
+  height: @radio-size*0.36;
+  left: -@radio-margin-left + @radio-size/2 - @radio-size*0.36/2;
+  border-radius: 50%;
+  background-color: @dark-gray;
+  top: 52%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+
+@media (min-width: @tablet-width) {
+  .form-radio__label {
+    margin: 14px 0 8px;
+    margin-left: @radio-margin-left;
+  }
+}

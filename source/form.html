@@ -51,7 +51,7 @@
       <fieldset class="form__sect">
         <legend class="form__title">Контактная информация:</legend>
         <div class="form-text form-text--contacts">
-          <label for="i4" class="form-text__label form-text__label--phone">Контактный телефон</label>
+          <label for="i4" class="form-text__label form-text__label--phone"><span class="form-text__label-short">Контактный</span> телефон</label>
           <input id="i4" class="form-text__input form-text__input--phone" type="tel" name="phone" placeholder="Введите телефон">
         </div>
         <div class="form-text form-text--contacts">
@@ -62,34 +62,34 @@
       <fieldset class="form__sect">
         <legend class="form__title">Ваше общее впечатление:</legend>
         <div class="form-radio">
-          <input id="i6" class="form-radio__input" type="radio" name="impression" value="positive" checked>
+          <input id="i6" class="form-radio__input visually-hidden" type="radio" name="impression" value="positive" checked>
           <label for="i6" class="form-radio__label">Скорее положительное</label>
         </div>
         <div class="form-radio">
-          <input id="i7" class="form-radio__input" type="radio" name="impression" value="negative">
+          <input id="i7" class="form-radio__input visually-hidden" type="radio" name="impression" value="negative">
           <label for="i7" class="form-radio__label">Скорее отрицательное</label>
         </div>
         <div class="form-radio">
-          <input id="i8" class="form-radio__input" type="radio" name="impression" value="none">
+          <input id="i8" class="form-radio__input visually-hidden" type="radio" name="impression" value="none">
           <label for="i8" class="form-radio__label">Затрудняюсь ответить</label>
         </div>
       </fieldset>
       <fieldset class="form__sect">
         <legend class="form__title">Посещенные достопримечательности:</legend>
         <div class="form-chbox">
-          <input id="i9" class="form-chbox__input" type="checkbox" name="sightseeing" value="Devil_Bridge" checked>
+          <input id="i9" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Devil_Bridge" checked>
           <label for="i9" class="form-chbox__label">Мост Дьявола</label>
         </div>
         <div class="form-chbox">
-          <input id="i10" class="form-chbox__input" type="checkbox" name="sightseeing" value="Slide_park" checked>
-          <label for="i10" class="form-chbox__label">Слайд-парк</label>
-        </div>
-        <div class="form-chbox">
-          <input id="i11" class="form-chbox__input" type="checkbox" name="sightseeing" value="Mount_Bell" checked>
+          <input id="i11" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Mount_Bell" checked>
           <label for="i11" class="form-chbox__label">Гора-Колокол</label>
         </div>
         <div class="form-chbox">
-          <input id="i12" class="form-chbox__input" type="checkbox" name="sightseeing" value="Red_rocks">
+          <input id="i10" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Slide_park" checked>
+          <label for="i10" class="form-chbox__label">Слайд-парк</label>
+        </div>
+        <div class="form-chbox">
+          <input id="i12" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Red_rocks">
           <label for="i12" class="form-chbox__label">Красные скалы</label>
         </div>
       </fieldset>
@@ -100,7 +100,7 @@
         </div>
       </fieldset>
       <button class="button form-button" type="submit">Отправить отзыв</button>
-      <small class="page-main__text">* — Обязательные поля</small>
+      <small class="form__note">* &ndash; Обязательные поля</small>
     </form>
   </main>
   <footer class="page-footer">
