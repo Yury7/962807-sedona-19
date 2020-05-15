@@ -1,6 +1,7 @@
 .page-main__banner-box {
+  max-width: @desktop-width;
   height: 158px;
-  margin: 0 auto 36px;
+  margin: 0 auto 40px;
   padding-top: 52px;
   position: relative;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -37,6 +38,8 @@
 
 .page-main__title {
   display: block;
+  max-width: @desktop-width;
+  margin: 0 auto;
   color: @black;
   font-size: 18px;
   font-weight: 700;
@@ -46,11 +49,34 @@
 
 .page-main__text {
   padding: 0 20px 0;
+  margin: 0;
   line-height: 24px;
 }
 
 .page-main__presentation {
-  margin-bottom: 33px;
+  max-width: @desktop-width;
+  margin: 0 auto 28px;
+}
+
+.page-main__map {
+  max-width: @desktop-width;
+  margin: 0 auto;
+
+  .page-main__title {
+    font-size: 21px;
+    line-height: 26px;
+    padding-bottom: 20px;
+  }
+
+  .page-main__text {
+    padding-bottom: 34px;
+  }
+}
+
+.page-main__form {
+  max-width: @desktop-width;
+  margin: 17px auto 15px;
+  padding: 0 20px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -65,6 +91,7 @@
   .page-main__banner-box--first {
     min-height: 518px;
     padding-top: 77px;
+    margin-bottom: 50px;
     background-size: auto 518px;
   }
 
@@ -76,6 +103,29 @@
   .page-main__title {
     font-size: 30px;
     padding: 0 160px 30px;
+  }
+
+  .page-main__form {
+    margin: 58px auto 0;
+    padding: 0 60px 0;
+  }
+
+  .page-main__map {
+    .page-main__title {
+      font-size: 30px;
+    }
+
+    .page-main__text {
+      padding: 12px 20% 42px;
+    }
+  }
+
+  .page-main__presentation {
+    margin-bottom: 56px;
+  }
+
+  .page-main__button {
+    width: 458px;
   }
 }
 
@@ -89,5 +139,10 @@
   .page-main__text {
     padding: 0 373px 0;
     line-height: 24px;
+  }
+
+  .page-main__form {
+    margin: 41px auto 6px;
+    padding: 0 120px 0;
   }
 }

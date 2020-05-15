@@ -4,15 +4,17 @@
 
 .main-nav__btn {
   position: absolute;
+  padding: 0;
   width: 23px;
   height: 21px;
   bottom: -40px;
   right: 20px;
-  cursor: pointer;
-  background: transparent;
   border: none;
-  z-index: 2;
   outline: none;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
 
   &::before {
     content: "";
@@ -33,51 +35,49 @@
   &:active {
     opacity: 0.3;
   }
-}
 
-.main-nav__btn--close {
-  position: absolute;
-  width: 23px;
-  height: 23px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  z-index: 2;
-  outline: none;
-  top: 17px;
-  right: 20px;
-  overflow: hidden;
-
-  &::before,
-  &::after {
-    content: "";
+  &--close {
     position: absolute;
-    display: block;
-    width: 25px;
-    height: 4px;
-    top: 9px;
-    left: -1px;
+    padding: 0;
+    width: 23px;
+    height: 23px;
+    top: 17px;
+    right: 20px;
+    z-index: 2;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
 
-    background-color: @white;
-  }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 25px;
+      height: 4px;
+      top: 9px;
+      left: -1px;
+      background-color: @white;
+    }
 
-  &::before {
-    content: "";
-    transform: rotate(45deg);
-  }
+    &::before {
+      transform: rotate(45deg);
+    }
 
-  &::after {
-    content: "";
-    transform: rotate(-45deg);
-  }
+    &::after {
+      transform: rotate(-45deg);
+    }
 
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
 
-  &:active {
-    opacity: 0.3;
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -103,6 +103,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    padding-bottom: 2px;
+  }
+
   .main-nav__btn,
   .main-nav__btn--close {
     display: none;

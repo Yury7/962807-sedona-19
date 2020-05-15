@@ -1,6 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   min-width: 320px;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0;
   color: @dark-gray;
@@ -14,14 +23,13 @@ body {
   text-transform: uppercase;
 }
 
-body * {
-  list-style-type: none;
-  list-style-position: inside;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+// body * {
+//   list-style-type: none;
+//   list-style-position: inside;
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
 
 @media (min-width: @tablet-width) {
   body {

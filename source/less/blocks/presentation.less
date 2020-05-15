@@ -1,6 +1,7 @@
 .presentation__title {
-  min-height: 110px;
-  padding: 20px 30px;
+  min-height: 106px;
+  padding: 0 30px;
+  margin: 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -9,32 +10,38 @@
 
 .presentation__intro {
   position: relative;
-  padding: 8px 30px 40px;
+  padding: 0 30px;
   line-height: 26px;
-  min-height: 92px;
+  min-height: 93px;
 }
-
 
 .presentation__intro::after {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
-  margin-left: -30px;
-  height: 57px;
+  left: 0;
+  right: 0;
+  height: 26px;
   bottom: 0;
-  background-image: url("../img/bg-intro-triangle-desktop-blue.svg");
-  background-position: 50% 50%;
-  background-size: auto 57px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-position: top;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
-  .presentation__intro::after {
-    display: none;
+  .presentation__intro {
+    min-height: 74px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .presentation__title {
-    padding: 0 28% 30px;
+    min-height: auto;
+    font-size: 21px;
+    padding: 0 18% 30px;
   }
 }

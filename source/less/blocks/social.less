@@ -2,16 +2,19 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+}
 
-  &__link {
-    display: table;
-    width: 47px;
-    height: 47px;
-    margin: 3px;
-    .btn-main();
-  }
+.social__link {
+  display: table;
+  width: 47px;
+  height: 47px;
+  margin: 3px;
+  .btn-main();
 
-  &__link::before {
+  &::before {
     content: "";
     display: table-cell;
     width: 100%;
@@ -19,15 +22,15 @@
     vertical-align: middle;
   }
 
-  &__link--twitter::before {
+  &--twitter::before {
     content: url("../img/icon-twitter.svg");
   }
 
-  &__link--facebook::before {
+  &--facebook::before {
     content: url("../img/icon-facebook.svg");
   }
 
-  &__link--youtube::before {
+  &--youtube::before {
     content: url("../img/icon-youtube.svg");
   }
 }
