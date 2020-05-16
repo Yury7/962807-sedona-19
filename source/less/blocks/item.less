@@ -108,7 +108,7 @@
 
 @media (min-width: @tablet-width) {
   .item__wrap {
-    flex: 1 0 256px;
+    flex: 1 1 256px;
     margin: 0;
   }
 
@@ -147,8 +147,9 @@
   }
 
   .item__img {
-    width: 512/768*100%;
+    height: auto;
     padding: 0;
+    flex: 1 1 512px;
   }
 
   .item--theme-main:nth-child(even) .item__img {
