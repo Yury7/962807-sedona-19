@@ -61,32 +61,41 @@
   &--icon {
     padding: 34px 20px 0 70px;
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      left: 20px;
-      top: 22px;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: auto 37px;
-      background-attachment: scroll;
-    }
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   width: 40px;
+    //   height: 40px;
+    //   left: 20px;
+    //   top: 22px;
+    //   background-position: 50% 50%;
+    //   background-repeat: no-repeat;
+    //   background-size: auto 37px;
+    //   background-attachment: scroll;
+    // }
 
-    &-house::before {
-      background-image: url("../img/icon-house.svg");
-    }
+    // &-house::before {
+    //   background-image: url("../img/icon-house.svg");
+    // }
 
-    &-gift::before {
-      background-image: url("../img/icon-gift.svg");
-    }
+    // &-gift::before {
+    //   background-image: url("../img/icon-gift.svg");
+    // }
 
-    &-food::before {
-      background-image: url("../img/icon-burger.svg");
-    }
+    // &-food::before {
+    //   background-image: url("../img/icon-burger.svg");
+    // }
   }
+}
+
+.item__icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 20px;
+  top: 22px;
+  fill: @main-color;
 }
 
 .item__desc {
@@ -137,14 +146,23 @@
       padding: 159px 0 22px;
     }
 
-    &--icon::before {
-      left: 50%;
-      top: 57px;
-      height: 77px;
-      width: 77px;
-      background-size: contain;
-      transform: translateX(-50%);
-    }
+    // &--icon::before {
+    //   left: 50%;
+    //   top: 57px;
+    //   height: 77px;
+    //   width: 77px;
+    //   background-size: contain;
+    //   transform: translateX(-50%);
+    // }
+  }
+
+  .item__icon {
+    left: 50%;
+    top: 57px;
+    height: 77px;
+    width: 77px;
+    background-size: contain;
+    transform: translateX(-50%);
   }
 
   .item__heading--icon ~ .item__desc {

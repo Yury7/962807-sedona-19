@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.main-nav__btn {
+.main-nav--closed .main-nav__btn {
   position: absolute;
   padding: 0;
   width: 23px;
@@ -35,65 +35,62 @@
   &:active {
     opacity: 0.3;
   }
+}
 
-  &--close {
+.main-nav--opened .main-nav__btn {
+  position: absolute;
+  padding: 0;
+  width: 23px;
+  height: 23px;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
-    padding: 0;
-    width: 23px;
-    height: 23px;
-    top: 17px;
-    right: 20px;
-    z-index: 2;
-    border: none;
-    outline: none;
-    overflow: hidden;
-    background: transparent;
-    cursor: pointer;
+    display: block;
+    width: 25px;
+    height: 4px;
+    top: 9px;
+    left: -1px;
+    background-color: @white;
+  }
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 25px;
-      height: 4px;
-      top: 9px;
-      left: -1px;
-      background-color: @white;
-    }
+  &::before {
+    transform: rotate(45deg);
+  }
 
-    &::before {
-      transform: rotate(45deg);
-    }
+  &::after {
+    transform: rotate(-45deg);
+  }
 
-    &::after {
-      transform: rotate(-45deg);
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
 
 @media (max-width: @mobile-width) {
-  .main-nav--closed .main-nav__list,
-  .main-nav--closed .main-nav__btn--close {
+  .main-nav--closed .main-nav__list {
     display: none;
   }
 
-  .main-nav--opened .main-nav__list,
-  .main-nav--opened .main-nav__btn--close {
+  .main-nav--opened .main-nav__list {
     display: block;
   }
 
-  .main-nav--nojs .main-nav__btn,
-  .main-nav--nojs .main-nav__btn--close {
+  .main-nav--nojs .main-nav__btn {
     display: none;
   }
 
@@ -107,8 +104,7 @@
     padding-bottom: 2px;
   }
 
-  .main-nav__btn,
-  .main-nav__btn--close {
+  .main-nav__btn {
     display: none;
   }
 }
