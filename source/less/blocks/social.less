@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.social__link {
+  display: flex;
+  position: relative;
+  width: 47px;
+  height: 47px;
+  margin: 3px;
+  .btn-main();
+
+  // &::before {
+  //   content: "";
+  //   display: table-cell;
+  //   width: 100%;
+  //   height: 100%;
+  //   vertical-align: middle;
+  // }
+
+  // &--twitter::before {
+  //   content: url("../img/icon-twitter.svg");
+  // }
+
+  // &--facebook::before {
+  //   content: url("../img/icon-facebook.svg");
+  // }
+
+  // &--youtube::before {
+  //   content: url("../img/icon-youtube.svg");
+  // }
+}
+
+.social__icon {
+  fill: @white;
+  display: block;
+  margin: auto;
+}

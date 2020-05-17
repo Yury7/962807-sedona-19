@@ -1,0 +1,111 @@
+@text-input-size: 58px;
+
+.form-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 9px 0 10px;
+
+  &--contacts {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    position: relative;
+    margin: 7px 0 6px;
+  }
+}
+
+.form-text__input {
+  height: @text-input-size;
+  padding-left: 21px;
+  flex-grow: 1;
+  border: none;
+  background: @silver;
+  font-family: "PT Sans", "Arial", sans-serif;
+
+  &::placeholder {
+    color: @black;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: @text-input-size;
+  }
+}
+
+.form-text__label {
+  margin-right: 18px;
+
+  &--email,
+  &--phone {
+    margin-left: 22px;
+    margin-bottom: 14px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: @text-input-size;
+      height: @text-input-size;
+      right: 0;
+      bottom: 0;
+      background-color: @gray;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--email::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  &--phone::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 13px 0 6px;
+  }
+
+  .form-text__label--email,
+  .form-text__label--phone {
+    margin: 0 0 9px 22px;
+  }
+
+  .form-text--contacts {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 0 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-text--contacts {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .form-text__label--phone,
+  .form-text__label--email {
+    margin: auto;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .form-text__label-short {
+    display: none;
+  }
+
+  .form-text__input--email,
+  .form-text__input--phone {
+    flex-grow: 0;
+    width: 315px;
+  }
+}

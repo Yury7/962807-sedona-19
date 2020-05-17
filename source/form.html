@@ -4,27 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 </head>
 
 <body>
   <header class="page-header">
-    <h1 class="visualy-hidden">Седона - туристический сайт горда</h1>
+    <h1 class="visually-hidden">Седона - туристический сайт горда</h1>
     <a class="page-header__logo" href="#">
-      <img class="page-header__logo-image" src="#" alt="Седона - туристический сайт горда" width="" height="">
+      <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Седона - туристический сайт горда" width="102px" height="83px">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__btn">Открыть меню</button>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__btn"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list site-list">
-        <li class="site-list__item"><a href="#">Главная</a></li>
-        <li class="site-list__item"><a href="#">Фото и видео</a></li>
-        <li class="site-list__item"><a href="#">Форма и отзывы</a></li>
-        <li class="site-list__item"><a href="#">HTML Academy</a></li>
+        <li class="site-list__item"><a href="index.html">Главная</a></li>
+        <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
+        <li class="site-list__item site-list__item--active"><a>Форма и отзывы</a></li>
+        <li class="site-list__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
     <div class="page-main__banner-box">
-      <img class="page-main__banner-img" src="#" alt="Sedona" width="" height="">
+      <img class="page-main__banner-img" src="img/text-sedona.svg" alt="Sedona" width="" height="">
     </div>
     <h2 class="page-main__title">Оставьте свой отзыв</h2>
     <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
@@ -46,47 +49,47 @@
       </fieldset>
       <fieldset class="form__sect">
         <legend class="form__title">Контактная информация:</legend>
-        <div class="form-number">
-          <label for="i4" class="form-number__label">Контактный телефон</label>
-          <input id="i4" class="form-number__input form-number__input--phone" type="tel" name="phone" placeholder="Введите телефон">
+        <div class="form-text form-text--contacts">
+          <label for="i4" class="form-text__label form-text__label--phone"><span class="form-text__label-short">Контактный</span> телефон</label>
+          <input id="i4" class="form-text__input form-text__input--phone" type="tel" name="phone" placeholder="Введите телефон">
         </div>
-        <div class="form-email">
-          <label for="i5" class="form-email__label">Электронная почта:</label>
-          <input id="i5" class="form-email__input form-email__input--email" type="email" name="email" placeholder="Введите e-mail">
+        <div class="form-text form-text--contacts">
+          <label for="i5" class="form-text__label form-text__label--email">Электронная почта:</label>
+          <input id="i5" class="form-text__input form-text__input--email" type="email" name="email" placeholder="Введите e-mail">
         </div>
       </fieldset>
       <fieldset class="form__sect">
         <legend class="form__title">Ваше общее впечатление:</legend>
         <div class="form-radio">
+          <input id="i6" class="form-radio__input visually-hidden" type="radio" name="impression" value="positive" checked>
           <label for="i6" class="form-radio__label">Скорее положительное</label>
-          <input id="i6" class="form-radio__input" type="radio" name="impression" value="positive" checked>
         </div>
         <div class="form-radio">
+          <input id="i7" class="form-radio__input visually-hidden" type="radio" name="impression" value="negative">
           <label for="i7" class="form-radio__label">Скорее отрицательное</label>
-          <input id="i7" class="form-radio__input" type="radio" name="impression" value="negative">
         </div>
         <div class="form-radio">
+          <input id="i8" class="form-radio__input visually-hidden" type="radio" name="impression" value="none">
           <label for="i8" class="form-radio__label">Затрудняюсь ответить</label>
-          <input id="i8" class="form-radio__input" type="radio" name="impression" value="none">
         </div>
       </fieldset>
       <fieldset class="form__sect">
         <legend class="form__title">Посещенные достопримечательности:</legend>
         <div class="form-chbox">
+          <input id="i9" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Devil_Bridge" checked>
           <label for="i9" class="form-chbox__label">Мост Дьявола</label>
-          <input id="i9" class="form-chbox__input" type="checkbox" name="sightseeing" value="Devil_Bridge" checked>
         </div>
         <div class="form-chbox">
-          <label for="i10" class="form-chbox__label">Слайд-парк</label>
-          <input id="i10" class="form-chbox__input" type="checkbox" name="sightseeing" value="Slide_park" checked>
-        </div>
-        <div class="form-chbox">
+          <input id="i11" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Mount_Bell" checked>
           <label for="i11" class="form-chbox__label">Гора-Колокол</label>
-          <input id="i11" class="form-chbox__input" type="checkbox" name="sightseeing" value="Mount_Bell" checked>
         </div>
         <div class="form-chbox">
+          <input id="i10" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Slide_park" checked>
+          <label for="i10" class="form-chbox__label">Слайд-парк</label>
+        </div>
+        <div class="form-chbox">
+          <input id="i12" class="form-chbox__input visually-hidden" type="checkbox" name="sightseeing" value="Red_rocks">
           <label for="i12" class="form-chbox__label">Красные скалы</label>
-          <input id="i12" class="form-chbox__input" type="checkbox" name="sightseeing" value="Red_rocks">
         </div>
       </fieldset>
       <fieldset class="form__sect">
@@ -96,35 +99,36 @@
         </div>
       </fieldset>
       <button class="button form-button" type="submit">Отправить отзыв</button>
-      <small class="page-main__text">* — Обязательные поля</small>
+      <small class="form__note">*&nbsp;&ndash;&nbsp;Обязательные поля</small>
     </form>
-    <footer class="page-footer">
-      <a href="#" class="page-footer__hashtag">#VisitSedona</a>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a href="https://twitter.com/" class="social__link social__link--twitter">
-            <span class="social__span">Седона на Twitter</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="https://facebook.com/" class="social__link social__link--facebook">
-            <span class="social__span">Седона на Facebook</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.youtube.com/" class="social__link social__link--youtube">
-            <span class="social-list__span">Седона на YouTube</span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано:</p>
-        <a class="copyright__link" href="https://htmlacademy.ru">
-          <img class="copyright__logo" src="#" alt="HTML Academy" width="" height="">
-        </a>
-      </div>
-    </footer>
   </main>
+  <footer class="page-footer">
+    <a href="#" class="page-footer__hashtag">#VisitSedona</a>
+    <ul class="page-footer__social social">
+      <li class="social__item">
+        <a href="https://twitter.com/" class="social__link social__link--twitter">
+          <span class="social__span visually-hidden">Седона на Twitter</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="https://facebook.com/" class="social__link social__link--facebook">
+          <span class="social__span visually-hidden">Седона на Facebook</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="https://www.youtube.com/" class="social__link social__link--youtube">
+          <span class="social__span visually-hidden">Седона на YouTube</span>
+        </a>
+      </li>
+    </ul>
+    <div class="page-footer__copyright copyright">
+      <p class="copyright__text">Разработано:</p>
+      <a class="copyright__link" href="https://htmlacademy.ru">
+        <img class="copyright__logo" src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27px" height="34px">
+      </a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
