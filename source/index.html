@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <script>
@@ -16,6 +17,9 @@
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <h1 class="visually-hidden">Седона - туристический сайт горда</h1>
     <a class="page-header__logo" href="#">
@@ -50,9 +54,9 @@
               <p class="item__desc">Cедона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <picture class="item__img">
-<!--               <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x"> -->
+              <source type="image/webp" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
               <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Улицы города" width="320" height="260">
@@ -60,21 +64,21 @@
             <ul class="benefits__item-list">
               <li class="benefits__item item">
                 <svg class="item__icon" width="39" height="37">
-                  <use xlink:href="img/sprite.svg#icon-house"></use>
+                  <use xlink:href="#icon-house"></use>
                 </svg>
                 <h4 class="item__heading item__heading--icon item__heading--icon-house">Жилье</h4>
                 <p class="item__desc">Рекомендуем пожить в настоящем мотеле, все&nbsp;как в кино!</p>
               </li>
               <li class="benefits__item item">
                 <svg class="item__icon" width="32" height="38">
-                  <use xlink:href="img/sprite.svg#icon-gift"></use>
+                  <use xlink:href="#icon-gift"></use>
                 </svg>
                 <h4 class="item__heading item__heading--icon item__heading--icon-gift">Сувениры</h4>
                 <p class="item__desc">Не только китайского, но и местного производства!</p>
               </li>
               <li class="benefits__item item">
                 <svg class="item__icon" width="40" height="35">
-                  <use xlink:href="img/sprite.svg#icon-burger"></use>
+                  <use xlink:href="#icon-burger"></use>
                 </svg>
                 <h4 class="item__heading item__heading--icon item__heading--icon-food">Еда</h4>
                 <p class="item__desc">Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!</p>
@@ -87,9 +91,9 @@
               <p class="item__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture class="item__img">
-<!--               <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x"> -->
+              <source type="image/webp" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
               <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="мост дьявола - природная арка между скал" width="320" height="260">
@@ -131,7 +135,7 @@
         <a href="https://twitter.com/" class="social__link social__link--twitter">
           <span class="social__span visually-hidden">Седона на Twitter</span>
           <svg class="social__icon" width="18" height="14">
-            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
       </li>
@@ -139,7 +143,7 @@
         <a href="https://facebook.com/" class="social__link social__link--facebook">
           <span class="social__span visually-hidden">Седона на Facebook</span>
           <svg class="social__icon" width="9" height="18">
-            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
       </li>
@@ -147,7 +151,7 @@
         <a href="https://www.youtube.com/" class="social__link social__link--youtube">
           <span class="social__span visually-hidden">Седона на YouTube</span>
           <svg class="social__icon" width="20" height="14">
-            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            <use xlink:href="#icon-youtube"></use>
           </svg>
         </a>
       </li>
