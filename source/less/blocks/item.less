@@ -44,7 +44,7 @@
 
   &--num {
     position: relative;
-    padding: 0 0px 47px;
+    padding: 0 0 47px;
   }
 
   &--num::after {
@@ -91,14 +91,14 @@
 @media (min-width: @tablet-width) {
   .item__wrap {
     flex: 1 1 auto;
-    width: 100%/3;
+    width: calc(100% / 3);
     padding: 0 5.5%;
   }
 
   .item__img {
     padding: 0;
     flex: 1 1 auto;
-    width: 100%/3*2;
+    width: calc(100% / 3 * 2);
   }
 
   .item__heading {
@@ -160,5 +160,4 @@
       transform: translateY(-50%);
     }
   }
-
 }

@@ -31,6 +31,13 @@
   font-weight: 700;
   line-height: @text-input-size;
   width: 100%;
+
+  &--email,
+  &--phone {
+    width: 100%;
+    display: block;
+    padding-right: @text-input-size;
+  }
 }
 
 .form-text__label {
@@ -57,7 +64,6 @@
 
   &--email,
   &--phone {
-
     &::after {
       content: "";
       display: block;
@@ -85,17 +91,6 @@
   }
 }
 
-.form-text__input {
-
-  &--email,
-  &--phone {
-    width: 100%;
-    display: block;
-    padding-right: @text-input-size;
-  }
-}
-
-
 @media (min-width: @tablet-width) {
   .form-text--contacts {
     width: 100%;
@@ -103,7 +98,6 @@
   }
 
   .form-text__label {
-
     &--email,
     &--phone {
       padding-bottom: 10px;
@@ -123,7 +117,6 @@
   }
 
   .form-text__input-wrapper {
-
     &--email,
     &--phone {
       min-width: 315px;
@@ -131,8 +124,6 @@
   }
 
   .form-text__label {
-
-
     &--email,
     &--phone {
       padding: 0;
