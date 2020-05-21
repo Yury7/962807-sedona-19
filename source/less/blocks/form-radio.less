@@ -1,21 +1,22 @@
 @radio-size: 56px;
-@radio-margin-left: 80px;
+@radio-margin-left: 77px;
 
 .form-radio {
-  text-transform: initial;
+  text-transform: none;
   color: @black;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  cursor: pointer;
+  text-align: left;
+  margin: 0 0 13px;
 }
 
 .form-radio__label {
   display: block;
-  cursor: pointer;
   position: relative;
   line-height: @radio-size;
-  text-align-last: left;
-  margin: 7px 0;
+  margin: 0;
   margin-left: @radio-margin-left;
 
   &::before {
@@ -31,7 +32,7 @@
   }
 }
 
-.form-radio__input:checked ~ .form-radio__label::after {
+.form-radio__input:checked~.form-radio__label::after {
   content: "";
   display: block;
   position: absolute;
@@ -46,8 +47,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-radio__label {
-    margin: 14px 0 8px;
-    margin-left: @radio-margin-left;
+  .form-radio {
+    margin: 0 0 22px;
   }
 }

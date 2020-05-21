@@ -7,6 +7,30 @@
 
 .copyright__text,
 .copyright__link {
-  margin: 0 2px;
+  margin: 0 3px;
   color: @black;
+}
+
+.copyright__logo {
+  fill: @black;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    fill: @main-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .copyright__text {
+    margin: 0 7px;
+  }
+
+  .copyright__link {
+    margin: 0 0px;
+  }
 }

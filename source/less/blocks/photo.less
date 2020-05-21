@@ -1,22 +1,31 @@
 .photo {
   max-width: @desktop-width;
-  margin: 0 auto 39px;
+  margin: 0 auto 32px;
+}
 
-  .photo__list {
-    list-style-type: none;
-    list-style-position: inside;
-    padding: 0;
-    margin: 0;
-  }
+.photo__text {
+  padding: 0 6.6% 0;
+}
+
+.photo__list {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 27px 0 0;
 }
 
 .photo-list__item {
-  padding: 22px 20px 21px;
+  padding: 22px 20px 17px;
 }
 
 @media (min-width: @tablet-width) {
   .photo {
     padding: 0 60px;
+    margin-bottom: 66px;
+  }
+
+  .photo__text {
+    padding: 0 15% 0;
   }
 
   .photo__list {
@@ -24,6 +33,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 68px 0 0;
   }
 
   .photo-list__item {
@@ -37,6 +47,15 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo {
+    padding: 0;
+    margin-bottom: 71px;
+  }
+
+  .photo__text {
+    padding: 0 31.2% 0;
+  }
+
   .photo-list__item {
     flex-basis: 100/3%;
   }

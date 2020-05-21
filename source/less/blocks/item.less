@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 0;
+  padding: 0 25px;
   margin: auto;
 }
 
@@ -44,7 +44,7 @@
 
   &--num {
     position: relative;
-    padding: 0 20px 47px;
+    padding: 0 0px 47px;
   }
 
   &--num::after {
@@ -59,33 +59,7 @@
   }
 
   &--icon {
-    padding: 34px 20px 0 70px;
-
-    // &::before {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   width: 40px;
-    //   height: 40px;
-    //   left: 20px;
-    //   top: 22px;
-    //   background-position: 50% 50%;
-    //   background-repeat: no-repeat;
-    //   background-size: auto 37px;
-    //   background-attachment: scroll;
-    // }
-
-    // &-house::before {
-    //   background-image: url("../img/icon-house.svg");
-    // }
-
-    // &-gift::before {
-    //   background-image: url("../img/icon-gift.svg");
-    // }
-
-    // &-food::before {
-    //   background-image: url("../img/icon-burger.svg");
-    // }
+    padding: 30px 0 17px;
   }
 }
 
@@ -94,23 +68,17 @@
   width: 40px;
   height: 40px;
   left: 20px;
-  top: 22px;
+  top: 19px;
   fill: @main-color;
 }
 
 .item__desc {
-  padding: 0 27px;
   margin: 0;
   line-height: 21px;
 }
 
-.item__heading--icon ~ .item__desc {
-  padding: 15px 20px 0 70px;
-}
-
 .item__img {
-  padding: 0;
-  padding-top: 40px;
+  padding: 40px 0 0;
   width: 100%;
 
   img {
@@ -122,12 +90,15 @@
 
 @media (min-width: @tablet-width) {
   .item__wrap {
-    flex: 1 0 256px;
-    margin: 0;
+    flex: 1 1 auto;
+    width: 100%/3;
+    padding: 0 5.5%;
   }
 
-  .item__desc {
-    padding: 0 43px 0;
+  .item__img {
+    padding: 0;
+    flex: 1 1 auto;
+    width: 100%/3*2;
   }
 
   .item__heading {
@@ -135,25 +106,16 @@
     line-height: 26px;
 
     &--num {
-      padding: 0 49px 51px;
+      padding: 0 15px 52px;
 
       &::after {
-        bottom: 20px;
+        bottom: 18px;
       }
     }
 
     &--icon {
       padding: 159px 0 22px;
     }
-
-    // &--icon::before {
-    //   left: 50%;
-    //   top: 57px;
-    //   height: 77px;
-    //   width: 77px;
-    //   background-size: contain;
-    //   transform: translateX(-50%);
-    // }
   }
 
   .item__icon {
@@ -165,15 +127,6 @@
     transform: translateX(-50%);
   }
 
-  .item__heading--icon ~ .item__desc {
-    padding: 0 20px 0;
-  }
-
-  .item__img {
-    padding: 0;
-    flex: 1 0 512px;
-  }
-
   .item--theme-main:nth-child(even) .item__img {
     order: -1;
   }
@@ -183,4 +136,29 @@
       display: none;
     }
   }
+}
+
+@media (min-width: @desktop-width) {
+  .item__wrap {
+    padding: 0 5.1%;
+  }
+
+  .item__heading--num {
+    padding: 0 62px 52px;
+  }
+
+  .item__img {
+    flex-basis: auto;
+    width: 800px;
+    height: 256px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
 }
