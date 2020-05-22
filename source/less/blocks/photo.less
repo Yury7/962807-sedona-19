@@ -8,13 +8,14 @@
 }
 
 .photo__list {
+  display: block;
   list-style-type: none;
   list-style-position: inside;
   padding: 0;
   margin: 27px 0 0;
 }
 
-.photo-list__item {
+.photo__item {
   padding: 22px 20px 17px;
 }
 
@@ -36,12 +37,12 @@
     margin: 68px 0 0;
   }
 
-  .photo-list__item {
+  .photo__item {
     flex-basis: 50%;
     padding: 0;
   }
 
-  .photo-list__item:nth-child(1) {
+  .photo__item:nth-child(1) {
     flex-basis: 100%;
   }
 }
@@ -56,7 +57,11 @@
     padding: 0 31.2% 0;
   }
 
-  .photo-list__item {
+  .photo__item {
     flex-basis: calc(100% / 3);
+  }
+
+  .photo__list {
+    margin-top: 70px;
   }
 }

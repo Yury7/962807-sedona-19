@@ -14,7 +14,14 @@
   line-height: 26px;
 }
 
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .page-footer__social {
+  max-width: 50%;
   margin: 0;
   margin-bottom: 37px;
 }
@@ -41,12 +48,17 @@
   }
 
   .page-footer__social {
-    margin: 0;
+    margin: auto;
+    max-width: 40%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
     padding: 0 120px 0;
+  }
+
+  .page-footer__social {
+    max-width: 30%;
   }
 }

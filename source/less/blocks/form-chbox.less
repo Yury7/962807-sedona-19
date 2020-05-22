@@ -38,15 +38,15 @@
   content: "";
   display: block;
   position: absolute;
-  width: @chbox-size*0.52;
-  height: @chbox-size*0.52;
-  left: -@chbox-margin-left + @chbox-size/2 - @chbox-size*0.52/2;
+  width: @chbox-size*0.45;
+  height: @chbox-size*0.45;
+  left: -@chbox-margin-left + @chbox-size/2 - @chbox-size*0.45/2;
   background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../img/icon-tick.svg");
-  top: 60%;
-  transform: translateY(-50%);
+  top: 51.9%;
+  transform: translateY(-36.4%);
 }
 
 @media (min-width: @tablet-width) {
@@ -60,5 +60,6 @@
 @media (min-width: @desktop-width) {
   .form-chbox {
     width: auto;
+    flex: 0 0 200px;
   }
 }
