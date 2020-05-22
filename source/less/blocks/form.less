@@ -1,7 +1,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+}
+
+.form__wrapper {
+  padding: 0;
+  margin: 0;
 }
 
 .form__sect {
@@ -9,35 +13,41 @@
   outline: none;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   position: relative;
-  padding: 59px 0 15px;
+  padding: 0 0 21px;
   margin: 0;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
-    height: 1px;
-    background-color: @black;
-    opacity: 0.1;
+  &:nth-child(1) {
+    .form-text__input {
+      display: block;
+    }
   }
 
   &:nth-child(2) {
-    padding-bottom: 21px;
+    padding-bottom: 33px;
   }
 
   &:nth-child(3) {
-    padding-bottom: 20px;
+    padding-bottom: 33px;
   }
 
   &:nth-child(4) {
-    padding-top: 87px;
-    padding-bottom: 1px;
+    padding-bottom: 19px;
+
+    .form__title {
+      padding-bottom: 18px;
+    }
+  }
+
+  &:nth-child(5) {
+    margin-top: 0;
+    margin-bottom: 28px;
+
+    .form__title {
+      padding-bottom: 19px;
+    }
   }
 }
 
@@ -45,24 +55,26 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
-  position: absolute;
+  display: block;
+  text-align: center;
   width: 100%;
-  top: 18px;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 0 0 22px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -17px;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    height: 1px;
+    background-color: @black;
+    opacity: 0.1;
+  }
 }
 
-.form-text__label--phone {
-  margin-top: 1px;
-}
-
-.form-textarea {
-  margin: 2px 0 10px;
-}
-
-.form-button {
-  margin: 28px auto;
-}
 
 .form__note {
   position: absolute;
@@ -78,66 +90,74 @@
 @media (min-width: @tablet-width) {
   .form {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__sect:nth-child(n) {
+    padding: 0;
   }
 
   .form__title {
     font-size: 21px;
-    top: 16px;
-  }
-
-  .form__sect:nth-child(1),
-  .form__sect:nth-child(3) {
-    .form__title {
-      width: auto;
-      left: 0;
-      transform: translateX(0);
-    }
-  }
-
-  .form__sect:nth-child(1) {
-    width: 41%;
-    margin-left: 9%;
-    justify-content: flex-end;
-
-    &::after {
-      display: none;
-    }
-  }
-
-  .form__sect:nth-child(3) {
-    order: -1;
-    width: 50%;
-    justify-content: flex-end;
-  }
-
-  .form__sect:nth-child(n) {
-    padding: 87px 0 0;
+    width: 100%;
 
     &::before {
       display: none;
     }
   }
 
+  .form__sect:nth-child(1),
+  .form__sect:nth-child(3) {
+    .form__title {
+      text-align: left;
+      padding-bottom: 57px;
+    }
+  }
+
+  .form__sect:nth-child(1) {
+    width: 41%;
+    margin-left: 9%;
+    flex-grow: 1;
+  }
+
+  .form__sect:nth-child(3) {
+    order: -1;
+    width: 50%;
+
+    .form__title {
+      &::after {
+        content: "";
+        display: block;
+        height: 300px;
+        position: absolute;
+        right: 0;
+        width: 1px;
+        top: 5px;
+        background-color: @black;
+        opacity: 0.1;
+      }
+    }
+  }
+
   .form__sect:nth-child(2),
   .form__sect:nth-child(n+4) {
-    padding: 120px 0 0;
-    justify-content: flex-end;
     width: 100%;
 
     .form__title {
-      top: 63px;
-      padding-left: 20%;
-      padding-right: 20%;
+      position: relative;
+      padding: 0 20%;
+      margin-bottom: 27px;
 
       &::before,
       &::after {
         content: "";
         display: block;
-        width: 20%;
         position: absolute;
-        left: 0;
-        height: 1px;
+        margin: 0;
         top: 50%;
+        left: 0;
+        width: 19%;
+        height: 1px;
         background-color: @black;
         opacity: 0.1;
       }
@@ -149,82 +169,110 @@
     }
   }
 
+  .form__sect:nth-child(2) {
+    margin: 49px 0 24px;
+  }
+
   .form__sect:nth-child(4) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    padding: 102px 66px 0;
-    width: 100%;
+    margin-bottom: 38px;
 
     .form__title {
-      top: 25px;
+      margin-bottom: 42px;
+      width: 100%;
+    }
+
+    .form__wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 9% 0 11%;
     }
   }
 
   .form__sect:nth-child(5) {
-    padding-top: 132px;
+    margin-bottom: 37px;
 
     .form__title {
-      top: 51px;
+      margin-bottom: 58px;
     }
   }
 
   .form-button {
-    margin: 50px 0 58px;
     width: 50%;
   }
 
   .form__note {
     display: block;
     position: static;
-    margin: auto;
     width: 50%;
     text-align: right;
     height: auto;
     color: @dark-gray;
     font-size: 14px;
+    line-height: 56px;
+    padding-top: 3px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form__sect:nth-child(3) .form__title {
-    left: 78px;
+  .form__sect:nth-child(4) {
+    margin-bottom: 36px;
+
+    .form__title {
+      margin-bottom: 42px;
+      padding: 0 29%;
+    }
+
+    .form__wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
+
+  .form__sect:nth-child(3) {
+    .form__wrapper {
+      padding-left: 4px;
+    }
+
+    .form__title {
+      padding-left: 75px;
+    }
+  }
+
+  .form__sect:nth-child(1) {
+    margin-left: 79px;
+
+    .form__title {
+      padding-left: 0;
+    }
   }
 
   .form__sect:nth-child(2) {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 161px;
+    .form__title {
+      margin-bottom: 74px;
+    }
+
+    .form__wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   .form__sect:nth-child(2),
   .form__sect:nth-child(n+4) {
     .form__title {
-      padding-left: 30%;
-      padding-right: 30%;
-
       &::before,
       &::after {
-        width: 280px;
+        width: 29.1%;
       }
-    }
-  }
-
-  .form__sect:nth-child(4) {
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    padding: 102px 0 0;
-    height: auto;
-  }
-
-  .form__sect:nth-child(5) {
-    padding-top: 131px;
-
-    .form__title {
-      top: 50px;
     }
   }
 }

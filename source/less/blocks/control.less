@@ -8,12 +8,12 @@
   left: 20px;
   right: 20px;
   height: 66px;
-  margin-top: -4px;
 }
 
 .control__progress-bar {
   height: 45px;
-  width: 100%;
+  left: 0;
+  right: 0;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   top: -45px;
@@ -29,6 +29,7 @@
     height: 3px;
     background-color: @white;
     opacity: 0.2;
+    cursor: pointer;
   }
 
   &::after {
@@ -42,6 +43,7 @@
     transform: translateY(-50%);
     background-color: @white;
     border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
   }
 }
 
@@ -52,61 +54,60 @@
   border: none;
   outline: none;
   margin: auto 0;
+  padding: 0;
   flex-shrink: 0;
+  fill: #5c6870;
+  cursor: pointer;
 }
 
 .control__reload {
-  width: 16px;
-  height: 20px;
   margin-left: 25px;
-  background-image: url("../img/icon-video-replay.svg");
 }
 
 .control__subtitles {
-  width: 32px;
-  height: 20px;
   margin-left: auto;
   margin-right: 31px;
-  background-image: url("../img/icon-video-subtitles.svg");
 }
 
 .control__fullscreen {
-  width: 20px;
-  height: 20px;
   margin-right: 23px;
-  background-image: url("../img/icon-video-fullscreen.svg");
 }
 
 @media (min-width: @tablet-width) {
   .control {
+    height: 93px;
+    margin-top: -92px;
     left: 0;
     right: 0;
-    height: 93px;
-    bottom: 4px;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
   .control__progress-bar {
-    display: inline-block;
-    top: 0;
-    margin: auto 0;
+    display: block;
+    width: 100%;
     position: relative;
+    top: auto;
+    margin: auto 42px;
     background-color: transparent;
 
     &::before {
       left: 0;
       right: 0;
     }
+
+    &::after {
+      left: 114px;
+    }
+  }
+
+  .control__reload,
+  .control__subtitles,
+  .control__fullscreen {
+    fill: @white;
   }
 
   .control__reload {
-    margin-left: 35px;
-    margin-right: 42px;
-  }
-
-  .control__subtitles {
-    margin-left: 42px;
-    margin-right: 31px;
+    margin-left: 34px;
   }
 
   .control__fullscreen {

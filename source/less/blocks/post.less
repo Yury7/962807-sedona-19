@@ -1,5 +1,6 @@
 .post__img {
   width: 100%;
+  display: block;
 }
 
 .post {
@@ -20,47 +21,38 @@
 }
 
 .post__author {
-  text-transform: initial;
+  text-transform: none;
   font-style: normal;
   margin: 0;
+  padding: 0;
 
   cite {
     font-style: normal;
   }
 }
 
+.post__wrapper {
+  padding: 15px 0 8px;
+}
+
 .post__title {
   color: @black;
   font-weight: 700;
-  margin: 0;
-  padding-top: 11px;
   line-height: 24px;
+  margin: 0;
+  padding: 0 0 3px;
 }
 
 .post__like-btn {
+  display: block;
   border: none;
+  outline: none;
   background-color: transparent;
   font-weight: 700;
-  line-height: 21px;
-  position: relative;
-  padding: 11px 11px 0 37px;
-  outline: none;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    opacity: 0.3;
-    width: 23px;
-    height: 21px;
-    left: 0;
-    bottom: 5px;
-    background: transparent;
-    background-image: url("../img/icon-like.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  line-height: 22px;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;
@@ -75,20 +67,54 @@
   }
 }
 
+.post__likes-count {
+  vertical-align: 2px;
+  padding-left: 6px;
+}
+
+.post__like-icon {
+  fill: @black;
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .post {
     border: none;
   }
 
   .post__desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: @silver;
-    padding-bottom: 11px;
+    padding: 16px 31px 19px 20px;
   }
 
+  .post__wrapper {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .post__desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 16px 26px 19px 20px;
+    margin-top: -80px;
+    color: @white;
+  }
+
+  .post__title,
+  .post__author-link,
   .post__like-btn {
-    position: absolute;
-    right: 20px;
-    top: 45%;
-    transform: translateY(-50%);
+    color: @white;
+    opacity: 1;
+  }
+
+  .post__like-icon {
+    fill: @white;
+    opacity: 1;
   }
 }

@@ -2,11 +2,13 @@
 @chbox-margin-left: 78px;
 
 .form-chbox {
-  text-transform: initial;
+  text-transform: none;
   color: @black;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  cursor: pointer;
+  text-align: left;
   margin: 0 0 24px;
 }
 
@@ -36,33 +38,32 @@
   content: "";
   display: block;
   position: absolute;
-  width: @chbox-size*0.52;
-  height: @chbox-size*0.52;
-  left: -@chbox-margin-left + @chbox-size/2 - @chbox-size*0.52/2;
+  width: @chbox-size*0.45;
+  height: @chbox-size*0.45;
+  left: -@chbox-margin-left + @chbox-size/2 - @chbox-size*0.45/2;
   background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../img/icon-tick.svg");
-  top: 60%;
-  transform: translateY(-50%);
+  top: 51.9%;
+  transform: translateY(-36.4%);
 }
 
 @media (min-width: @tablet-width) {
   .form-chbox {
     display: block;
-    margin: 16px;
-    flex-basis: 40%;
-  }
-
-  .form-chbox__label {
-    line-height: @chbox-size;
-    text-align-last: left;
-    margin-left: @chbox-margin-left;
+    width: 40%;
+    margin: 0 0 31px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form-chbox {
-    flex-basis: auto;
+    width: auto;
+    flex: 0 0 203px;
+
+    &:nth-child(-n+2) {
+      flex: 0 0 228px;
+    }
   }
 }

@@ -16,7 +16,16 @@
   color: @black;
   background-color: @white;
 
-  .item:last-child {
+  .benefits__item {
+    min-height: 107px;
+    padding: 0 37px 0 70px;
+  }
+
+  .benefits__item:first-child {
+    padding-top: 5px;
+  }
+
+  .benefits__item:last-child {
     padding-bottom: 34px;
   }
 }
@@ -26,12 +35,32 @@
   flex-direction: column;
   padding: 0;
 
-  &:nth-child(-n+2) {
-    padding-top: 43px;
+  &:nth-child(1) {
+    padding-top: 80px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      height: 37px;
+      top: 0;
+      background-image: url("../img/bg-triangle.svg");
+      background-position: bottom;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &:nth-child(2) {
+    padding-top: 41px;
   }
 
   &:nth-child(n+3) {
-    min-height: 167px;
+    min-height: 168px;
+    padding: 29px 33px 20px;
   }
 }
 
@@ -47,16 +76,22 @@
     flex-direction: row;
     align-items: center;
 
+    &:nth-child(1) {
+      &::after {
+        display: none;
+      }
+    }
+
     &:nth-child(-n+2) {
       padding-top: 0;
       width: 100%;
     }
 
     &:nth-child(n+3) {
-      flex: 1 0 256px;
+      display: block;
+      flex: 1 1 100%/5;
       min-height: 256px;
-      align-content: flex-start;
-      padding: 46px 0 20px;
+      padding: 46px 5.5% 20px;
     }
   }
 
@@ -68,13 +103,30 @@
     padding: 0;
     width: 100%;
 
-    .benefits__item {
-      flex: 1 0 256px;
+    .benefits__item:nth-child(n) {
+      flex: 1 1 auto;
+      width: 100%/3;
       min-height: 330px;
+      padding: 0 5.5% 30px;
     }
+
 
     .benefits__item:nth-child(2) {
       order: 1;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits__item-list {
+    .benefits__item:nth-child(n) {
+      padding: 0 4.3% 30px;
+    }
+  }
+
+  .benefits__list > .benefits__item {
+    &:nth-child(n+3) {
+      padding: 46px 5.1% 20px;
     }
   }
 }
