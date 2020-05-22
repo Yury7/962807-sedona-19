@@ -54,4 +54,6 @@ function modalInit() {
 
 };
 
-modalInit();
+if(this.classList.contains('.js-form')) {
+  modalInit();
+};

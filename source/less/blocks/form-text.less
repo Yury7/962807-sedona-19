@@ -22,6 +22,7 @@
   height: @text-input-size;
   padding: 0;
   padding-left: 21px;
+  padding-right: 21px;
   border: none;
   outline: none;
   background: @silver;
@@ -31,12 +32,13 @@
   font-weight: 700;
   line-height: @text-input-size;
   width: 100%;
+  min-width: 150px;
 
   &--email,
   &--phone {
     width: 100%;
     display: block;
-    padding-right: @text-input-size;
+    padding-right: @text-input-size+21px;
   }
 }
 
@@ -92,9 +94,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-text--contacts {
-    width: 100%;
-    margin: 0 0 27px;
+  .form-text {
+    margin-bottom: 19px;
+
+    &--contacts {
+      width: 100%;
+      margin: 0 0 27px;
+    }
   }
 
   .form-text__label {
@@ -114,6 +120,7 @@
     width: 50%;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
   }
 
   .form-text__input-wrapper {
@@ -127,9 +134,9 @@
     &--email,
     &--phone {
       padding: 0;
-      padding-right: 22px;
+      padding-right: 16px;
       line-height: @text-input-size;
-      white-space: nowrap;
+      // white-space: nowrap;
     }
   }
 }
