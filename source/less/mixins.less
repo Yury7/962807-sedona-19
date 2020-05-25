@@ -11,11 +11,8 @@
 
   background-color: @main-color;
   color: @white;
+  fill: @white;
 
-  &:active {
-    background-color: @main-color-active;
-    color: rgba(255, 255, 255, 0.3);
-  }
 
   &:hover {
     background-color: @main-color-focus;
@@ -27,5 +24,40 @@
 
   &:disabled {
     background-color: @main-color-disable;
+  }
+
+  &:active {
+    background-color: @main-color-active;
+    color: rgba(255, 255, 255, 0.3);
+    fill-opacity: 0.3;
+    opacity: 1;
+  }
+}
+
+.link-main() {
+  color: @black;
+  fill: @black;
+  outline: none;
+
+
+  &:hover {
+    color: @main-color;
+    fill: @main-color;
+  }
+
+  &:focus {
+    color: @main-color;
+    fill: @main-color;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+    fill: @black;
+    fill-opacity: 0.3;
+    opacity: 1;
+  }
+
+  &:disabled {
+    color: @main-color-disable;
   }
 }
