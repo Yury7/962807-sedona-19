@@ -40,6 +40,16 @@
     display: block;
     padding-right: @text-input-size+21px;
   }
+
+  &:hover {
+    background-color: @main-color-disable;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @white;
+    outline: 4px  @main-color-disable solid;
+  }
 }
 
 .form-text__label {

@@ -10,14 +10,15 @@
   cursor: pointer;
   text-align: left;
   margin: 0 0 13px;
+  padding: 15px 0;
 }
 
 .form-radio__label {
   display: block;
   position: relative;
-  line-height: @radio-size;
   margin: 0;
   margin-left: @radio-margin-left;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -30,6 +31,18 @@
     top: 52%;
     transform: translateY(-50%);
   }
+
+  &:hover::before {
+    background-color: @main-color-disable;
+  }
+
+  &:active::before {
+    background-color: #d5d5d5;
+  }
+}
+
+.form-radio__input:focus ~ .form-radio__label::before {
+  background-color: @main-color-disable;
 }
 
 .form-radio__input:checked ~ .form-radio__label::after {
@@ -44,6 +57,10 @@
   top: 52%;
   transform: translateY(-50%);
   z-index: 9;
+}
+
+.form-radio__input:checked ~ .form-radio__label:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

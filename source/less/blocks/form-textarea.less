@@ -15,6 +15,16 @@
   line-height: 26px;
   font-weight: 700;
   padding: 14px 12px 14px 20px;
+
+  &:hover {
+    background-color: @main-color-disable;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @white;
+    outline: 4px @main-color-disable solid;
+  }
 }
 
 @media (min-width: @tablet-width) {
