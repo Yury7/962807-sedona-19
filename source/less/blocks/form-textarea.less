@@ -4,26 +4,27 @@
 }
 
 .form-textarea__input {
-  border: none;
   outline: none;
   width: 100%;
   height: 160px;
   background-color: @silver;
+  border: 4px @silver solid;
   color: @black;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  padding: 14px 12px 14px 20px;
+  padding: 10px 8px 10px 16px;
 
   &:hover {
     background-color: @main-color-disable;
+    border: 4px @main-color-disable solid;
   }
 
   &:active,
   &:focus {
     background-color: @white;
-    outline: 4px @main-color-disable solid;
+    border: 4px @main-color-disable solid;
   }
 }
 

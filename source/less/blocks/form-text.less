@@ -20,35 +20,36 @@
 
 .form-text__input {
   height: @text-input-size;
-  padding: 0;
-  padding-left: 21px;
-  padding-right: 21px;
-  border: none;
+  padding: 0 14px;
+  border: 4px @silver solid;
   outline: none;
   background: @silver;
   font-family: "PT Sans", "Arial", sans-serif;
   color: @black;
   font-size: 18px;
   font-weight: 700;
-  line-height: @text-input-size;
+  line-height: @text-input-size - 8px;
   width: 100%;
   min-width: 150px;
+  vertical-align: top;
 
   &--email,
   &--phone {
     width: 100%;
     display: block;
-    padding-right: @text-input-size+21px;
+    padding-left: 15px;
+    padding-right: @text-input-size+12px;
   }
 
   &:hover {
     background-color: @main-color-disable;
+    border: 4px @main-color-disable solid;
   }
 
   &:active,
   &:focus {
     background-color: @white;
-    outline: 4px  @main-color-disable solid;
+    border: 4px @main-color-disable solid;
   }
 }
 
